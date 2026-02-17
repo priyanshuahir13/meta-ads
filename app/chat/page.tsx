@@ -1,5 +1,5 @@
-import { SplitPaneShell } from "@/components/layout/split-pane-shell";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SplitPaneShell } from '@/components/layout/split-pane-shell';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function ChatRoutePage() {
   return (
@@ -10,10 +10,13 @@ export default function ChatRoutePage() {
             <CardTitle>Conversation Context</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2 text-sm text-muted-foreground">
-            <p>Route: <code>/chat</code></p>
             <p>
-              Intended for context cards (active ad account, selected campaigns, and action queue)
-              that accompany the left-side assistant thread.
+              Draft-first mode is enabled: every generated proposal must be Previewed and Approved
+              before publish is allowed.
+            </p>
+            <p>
+              Each publish request is checked against backend budget caps and approval token/hash
+              guardrails.
             </p>
           </CardContent>
         </Card>
